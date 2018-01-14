@@ -17,6 +17,9 @@ class Content extends React.Component {
 	render() {
 		return (
 				<div className="content">
+						<header>
+							<h2>React Photo Editor</h2>
+						</header>
 					<img src="assets/forest.jpg" 
 						alt="" 
 						width='720px'
