@@ -1,7 +1,9 @@
 const init = {
 	"brightness": "100%",
 	"sepia": '0%',
-	"hue-rotate": "0deg"
+	"hue-rotate": "0deg",
+	"grayscale": "0%",
+	"contrast": "100%"
 }
 function rs (newState, prevState) {
 	var returnedState = {};
@@ -21,6 +23,12 @@ export default function filterReducer (state=init, action) {
 		}
 		case "CHANGE_HUE_ROTATE" : {
 			return rs({'hue-rotate': action.payload+"deg"}, state)
+		}
+		case "CHANGE_GRAYSCALE": {
+			return rs({'grayscale': action.payload+'%'}, state)
+		}
+		case "CHANGE_CONTRAST": {
+			return rs({'contrast': action.payload+"%"}, state)
 		}
 		case "GET_STATE":
 		default: {
